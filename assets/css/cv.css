@@ -1,0 +1,874 @@
+/* ========================================
+   CV - Styles personnalisés
+   ======================================== */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Container principal */
+.cv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header avec bandes obliques */
+.cv-header {
+  background: linear-gradient(135deg, #37474f 0%, #455a64 50%, #546e7a 100%);
+  padding: 40px 60px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bandes obliques décoratives dans le header */
+.cv-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 40%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.03);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.cv-header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -5%;
+  width: 30%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.cv-header h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cv-header p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  color: #b0bec5;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* Section icônes */
+.section-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(55, 71, 79, 0.1);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.section-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #37474f;
+  letter-spacing: 0.15rem;
+}
+
+/* Colonne gauche */
+.cv-left-column {
+  width: 65%;
+  padding: 40px 50px;
+  background: white;
+}
+
+/* Items d'expérience */
+.experience-item {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 3px solid #b0bec5;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 13px;
+  height: 13px;
+  background: #546e7a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #b0bec5;
+}
+
+.experience-item:hover {
+  border-left-color: #546e7a;
+  transform: translateX(5px);
+}
+
+.experience-item h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #37474f;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  margin-bottom: 4px;
+}
+
+.experience-item .date {
+  font-size: 0.8rem;
+  color: #78909c;
+  font-style: italic;
+}
+
+/* Colonne droite avec bandes obliques */
+.cv-right-column {
+  width: 35%;
+  background: linear-gradient(180deg, #455a64 0%, #37474f 50%, #263238 100%);
+  padding: 40px 35px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    inset 5px 0 15px rgba(0, 0, 0, 0.2),
+    -3px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bandes obliques dans la colonne droite */
+.cv-right-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  transform: skewX(-10deg);
+  pointer-events: none;
+}
+
+.cv-right-column::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -30%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  transform: skewX(-10deg);
+  pointer-events: none;
+}
+
+.cv-right-column > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Photo de profil */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  margin: 0 auto 30px;
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sections de la colonne droite */
+.right-section-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.right-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.12rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Compétences avec icônes */
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tech-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tech-name {
+  font-size: 0.8rem;
+  color: #eceff1;
+}
+
+/* Tooltips génériques pour les compétences (et autres éléments) */
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: normal;
+  width: max-content;
+  max-width: 260px;
+  line-height: 1.35;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 2000;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  bottom: 112%;
+  right: 12px;
+  border: 6px solid transparent;
+  border-top-color: rgba(0,0,0,0.85);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 2001;
+}
+
+[data-tooltip]:hover::after,
+[data-tooltip]:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Désactiver les pseudo-tooltips (on utilise la version JS hors flux) */
+[data-tooltip]::after,
+[data-tooltip]::before {
+  display: none !important;
+  content: none !important;
+}
+
+@media print {
+  [data-tooltip]::after,
+  [data-tooltip]::before {
+    display: none !important;
+  }
+}
+
+/* JS tooltip (hors flux, non coupé) */
+.tooltip-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+  pointer-events: none;
+}
+
+.tooltip-box {
+  background: rgba(0,0,0,0.92);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  max-width: 280px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  font-size: 12px;
+  line-height: 1.35;
+  transform-origin: bottom right;
+  opacity: 0;
+  transform: translateY(6px) scale(.98);
+  transition: transform .16s ease, opacity .16s ease;
+}
+
+.tooltip-box.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top-color: rgba(0,0,0,0.92);
+}
+
+@media print {
+  .tooltip-layer { display: none !important; }
+}
+
+/* Animation d'ouverture du modal expérience */
+#experienceModal .modal-anim {
+  transform: translateY(10px) scale(.96);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+}
+
+#experienceModal.is-open .modal-anim {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Section Contact */
+.contact-section {
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #cfd8dc;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  color: white;
+  transform: translateX(3px);
+}
+
+.contact-item i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+/* Espacements */
+.section-spacing {
+  margin-bottom: 35px;
+}
+
+/* Effets d'ombre globaux */
+.shadow-light {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-heavy {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cv-left-column {
+    width: 60%;
+  }
+  
+  .cv-right-column {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+  }
+  
+  .cv-left-column,
+  .cv-right-column {
+    width: 100%;
+  }
+  
+  .cv-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Animation au chargement */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Impression et PDF */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 5mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html, body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm;
+    min-height: 100%;
+  }
+  
+  .cv-container {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    width: 210mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    page-break-after: auto;
+  }
+
+  .cv-header {
+    padding: 8px 20px 6px 20px !important;
+    transform: none !important;
+    opacity: 1 !important;
+    page-break-after: avoid;
+    margin-bottom: 0 !important;
+    min-height: auto !important;
+  }
+
+  .cv-header h1 {
+    font-size: 1.2rem !important;
+    margin-bottom: 2px !important;
+    letter-spacing: 0.18rem !important;
+  }
+
+  .cv-header p {
+    font-size: 0.65rem !important;
+    margin: 0 !important;
+  }
+
+  /* Structure en deux colonnes */
+  .cv-container > div[style*="flex"] {
+    display: flex !important;
+    /* Autoriser la coupure à l'intérieur du conteneur principal
+       pour éviter une première page vide avec seulement le header */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  .cv-left-column {
+    width: 65% !important;
+    padding: 8px 20px 8px 25px !important;
+    page-break-inside: auto;
+  }
+
+  .cv-right-column {
+    width: 35% !important;
+    padding: 8px 18px !important;
+    page-break-inside: auto;
+  }
+
+  /* Photo de profil plus petite */
+  .profile-photo {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 12px !important;
+    border-width: 3px !important;
+  }
+
+  /* Réduire les espacements */
+  .section-spacing {
+    margin-bottom: 8px !important;
+  }
+
+  .experience-item {
+    margin-bottom: 6px !important;
+    padding-left: 10px !important;
+    page-break-inside: avoid;
+    border-left-width: 2px !important;
+  }
+
+  .experience-item::before {
+    width: 8px !important;
+    height: 8px !important;
+    left: -5px !important;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #b0bec5 !important;
+  }
+
+  .experience-item h3 {
+    font-size: 0.7rem !important;
+    margin-bottom: 1px !important;
+    line-height: 1.2 !important;
+  }
+
+  .experience-item ul {
+    margin: 2px 0 !important;
+    padding-left: 10px !important;
+  }
+
+  .experience-item li {
+    font-size: 0.63rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .date {
+    font-size: 0.6rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .experience-item p.date {
+    margin-bottom: 3px !important;
+    line-height: 1.2 !important;
+  }
+
+  .experience-item > div:first-child {
+    margin-bottom: 2px !important;
+  }
+
+  /* Titres de section */
+  .section-title {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .section-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* En-tête de section */
+  .cv-left-column section > div:first-child,
+  .cv-right-column section > div:first-child {
+    margin-bottom: 10px !important;
+    gap: 10px !important;
+  }
+
+  /* Colonne droite - réduire les tailles */
+  .right-section-title {
+    font-size: 0.75rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  .right-section-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Section profil */
+  .cv-right-column p {
+    font-size: 0.65rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Badges de compétences plus compacts */
+  .cv-right-column [style*="grid"] {
+    gap: 6px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .cv-right-column [style*="padding: 8px"] {
+    padding: 4px 5px !important;
+  }
+
+  .cv-right-column [style*="padding: 8px"] span {
+    font-size: 0.6rem !important;
+  }
+
+  .cv-right-column [style*="width: 32px"] {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 0.55rem !important;
+  }
+
+  .cv-right-column [style*="width: 32px"] i {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* Publications et Formation */
+  .cv-left-column ul[style*="list-style: none"] {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cv-left-column ul[style*="list-style: none"] li {
+    font-size: 0.6rem !important;
+    line-height: 1.3 !important;
+    padding: 3px 0 3px 10px !important;
+    margin-bottom: 4px !important;
+    border-left-width: 2px !important;
+  }
+
+  .cv-left-column ul[style*="list-style: none"] li strong {
+    font-size: 0.6rem !important;
+  }
+
+  .cv-left-column ul[style*="list-style: none"] li p {
+    margin: 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Formation - réduire encore */
+  .cv-left-column section:nth-of-type(2) h3 {
+    font-size: 0.7rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .cv-left-column section:nth-of-type(2) p {
+    font-size: 0.6rem !important;
+    margin: 0 0 2px 0 !important;
+  }
+
+  .cv-left-column section:nth-of-type(2) > div:last-child {
+    padding-left: 10px !important;
+    border-left-width: 2px !important;
+  }
+
+  /* Contact */
+  .contact-item {
+    font-size: 0.65rem !important;
+    gap: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .contact-item i {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .contact-section {
+    padding-top: 12px !important;
+    margin-top: 12px !important;
+  }
+
+  /* Personnalité et langues */
+  .cv-right-column [style*="gap: 10px"] {
+    gap: 4px !important;
+  }
+
+  .cv-right-column [style*="gap: 10px"] span {
+    font-size: 0.62rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .cv-right-column [style*="width: 6px"] {
+    width: 4px !important;
+    height: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Réduire tous les espacements entre sections colonne droite */
+  .cv-right-column .section-spacing {
+    margin-bottom: 8px !important;
+  }
+
+  .cv-right-column section > div:first-child {
+    margin-bottom: 8px !important;
+  }
+
+  /* Cacher les éléments interactifs */
+  #downloadPDF,
+  #experienceModal,
+  .notification,
+  [style*="Ouverture de la boîte d'impression"] {
+    display: none !important;
+  }
+
+  /* Éviter les coupures malheureuses */
+  h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h1, h2 {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  /* Gestion intelligente des coupures de page */
+  section {
+    page-break-inside: auto;
+  }
+
+  /* Garder ensemble les petites sections */
+  .contact-section,
+  section:has(.profile-photo) {
+    page-break-inside: avoid !important;
+  }
+
+  /* Formation et publications peuvent se casser */
+  .cv-left-column section:nth-of-type(2),
+  .cv-left-column section:nth-of-type(3) {
+    page-break-inside: auto;
+  }
+
+  /* Permettre coupure après les 5 premières expériences */
+  .cv-left-column .experience-item:nth-child(n+6) {
+    page-break-inside: auto;
+  }
+
+  /* Mais éviter les orphelins */
+  .cv-left-column .experience-item:first-child,
+  .cv-left-column .experience-item:nth-child(2) {
+    page-break-after: auto;
+  }
+
+  /* Essayer de garder au moins 2 expériences ensemble */
+  .cv-left-column section:first-of-type {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Supprimer tous les pseudo-éléments décoratifs */
+  .cv-header::before,
+  .cv-header::after,
+  .cv-right-column::before,
+  .cv-right-column::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Supprimer les effets de transition et transformation */
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Optimiser les marges pour formation */
+  .cv-left-column section:nth-of-type(2) > div:first-child {
+    margin-top: 0 !important;
+  }
+}
+
+/* Classe spéciale pour l'impression */
+body.printing {
+  overflow: hidden;
+}
+
+/* Styles pour la génération PDF */
+.pdf-generating {
+  pointer-events: none;
+}
+
+.pdf-generating #downloadPDF,
+.pdf-generating #experienceModal {
+  display: none !important;
+}
+
+/* Animation de chargement PDF */
+@keyframes pdfLoading {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.pdf-loading {
+  animation: pdfLoading 1.5s infinite;
+}
+
+
