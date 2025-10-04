@@ -211,7 +211,7 @@
         <!-- PHOTO DE PROFIL -->
         <div style="display: flex; justify-content: center;">
           <div class="profile-photo">
-            <img src="https://via.placeholder.com/150x150.png" alt="Photo de profil">
+            <img src="1542152992781.jpeg" alt="Photo de profil">
           </div>
         </div>
 
@@ -241,6 +241,7 @@
             <h2 class="right-section-title">COMPÉTENCES PRO</h2>
           </div>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+            <h4 style="grid-column: 1 / -1; color: white; margin-top: 10px;">Langages & Frameworks</h4>
             <!-- Java -->
             <div data-tooltip="Langage principal pour mes backends. Utilisé de Java 8 à 21 (records, switch patterns)." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
               <div style="width: 32px; height: 32px; background: #f89820; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 0.65rem;">
@@ -262,13 +263,14 @@
               </div>
               <span style="font-size: 0.8rem; color: #eceff1;">Spring Batch</span>
             </div>
-            <!-- REST API -->
-            <div data-tooltip="Conception d'APIs REST: validation, versioning, OpenAPI/Swagger, idempotence, tests." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
-              <div style="width: 32px; height: 32px; background: #61dafb; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                <i data-lucide="webhook" style="width: 18px; height: 18px; color: #333;"></i>
+            <!-- Vue.js -->
+            <div data-tooltip="Développement d'interfaces, composants, intégration d'APIs et optimisations UX." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #42b883; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 0.7rem;">
+                VUE
               </div>
-              <span style="font-size: 0.8rem; color: #eceff1;">REST API</span>
+              <span style="font-size: 0.8rem; color: #eceff1;">Vue.js</span>
             </div>
+            <h4 style="grid-column: 1 / -1; color: white; margin-top: 10px;">Bases de données</h4>
             <!-- PostgreSQL -->
             <div data-tooltip="Modélisation SQL, indexation, vues matérialisées, optimisation de requêtes, migrations." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
               <div style="width: 32px; height: 32px; background: #336791; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
@@ -283,13 +285,7 @@
               </div>
               <span style="font-size: 0.8rem; color: #eceff1;">Oracle</span>
             </div>
-            <!-- AWS -->
-            <div data-tooltip="S3 (buckets, ACL, presigned URLs), intégration via SDK/API, bonnes pratiques sécurité." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
-              <div style="width: 32px; height: 32px; background: #ff9900; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                <i data-lucide="cloud" style="width: 18px; height: 18px; color: white;"></i>
-              </div>
-              <span style="font-size: 0.8rem; color: #eceff1;">AWS S3</span>
-            </div>
+            <h4 style="grid-column: 1 / -1; color: white; margin-top: 10px;">DevOps & Cloud</h4>
             <!-- Docker -->
             <div data-tooltip="Conteneurisation d'applis Java, multi-stage builds, optimisation d'images, compose." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
               <div style="width: 32px; height: 32px; background: #2496ed; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
@@ -311,6 +307,14 @@
               </div>
               <span style="font-size: 0.8rem; color: #eceff1;">Ansible</span>
             </div>
+            <!-- AWS -->
+            <div data-tooltip="S3 (buckets, ACL, presigned URLs), intégration via SDK/API, bonnes pratiques sécurité." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #ff9900; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="cloud" style="width: 18px; height: 18px; color: white;"></i>
+              </div>
+              <span style="font-size: 0.8rem; color: #eceff1;">AWS S3</span>
+            </div>
+            <h4 style="grid-column: 1 / -1; color: white; margin-top: 10px;">Serveur</h4>
             <!-- Linux -->
             <div data-tooltip="Administration courante, scripts Bash, supervision, diagnostic incidents en recette." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
               <div style="width: 32px; height: 32px; background: #fcc624; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
@@ -318,12 +322,42 @@
               </div>
               <span style="font-size: 0.8rem; color: #eceff1;">Linux</span>
             </div>
-            <!-- Vue.js -->
-            <div data-tooltip="Développement d'interfaces, composants, intégration d'APIs et optimisations UX." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
-              <div style="width: 32px; height: 32px; background: #42b883; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 0.7rem;">
-                VUE
+            <h4 style="grid-column: 1 / -1; color: white; margin-top: 10px;">Sécurité & Intégration</h4>
+            <!-- Okta -->
+            <div data-tooltip="Gestion des identités et des accès (SSO, MFA)." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #0070c9; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="shield" style="width: 18px; height: 18px; color: white;"></i>
               </div>
-              <span style="font-size: 0.8rem; color: #eceff1;">Vue.js</span>
+              <span style="font-size: 0.8rem; color: #eceff1;">Okta</span>
+            </div>
+            <!-- Vault -->
+            <div data-tooltip="Gestion des secrets et des accès pour sécuriser les applications." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #62a0f7; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="key-round" style="width: 18px; height: 18px; color: white;"></i>
+              </div>
+              <span style="font-size: 0.8rem; color: #eceff1;">Vault</span>
+            </div>
+            <!-- REST API -->
+            <div data-tooltip="Conception d'APIs REST: validation, versioning, OpenAPI/Swagger, idempotence, tests." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #61dafb; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="webhook" style="width: 18px; height: 18px; color: #333;"></i>
+              </div>
+              <span style="font-size: 0.8rem; color: #eceff1;">REST API</span>
+            </div>
+            <!-- Salesforce -->
+            <div data-tooltip="Intégration et développement sur la plateforme Salesforce." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #00a1e0; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="cloud" style="width: 18px; height: 18px; color: white;"></i>
+              </div>
+              <span style="font-size: 0.8rem; color: #eceff1;">Salesforce</span>
+            </div>
+            <h4 style="grid-column: 1 / -1; color: white; margin-top: 10px;">Orchestration</h4>
+            <!-- JS7 -->
+            <div data-tooltip="Orchestration et automatisation des flux de travaux et des batchs." style="display: flex; align-items: center; gap: 8px; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">
+              <div style="width: 32px; height: 32px; background: #f0db4f; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="calendar-clock" style="width: 18px; height: 18px; color: #333;"></i>
+              </div>
+              <span style="font-size: 0.8rem; color: #eceff1;">JS7</span>
             </div>
           </div>
         </section>
