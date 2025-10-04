@@ -36,7 +36,7 @@
           </div>
 
           <!-- HOP -->
-          <div class="experience-item">
+          <div class="experience-item" data-experience-key="HOP">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
               <h3>TECH LEAD – APPLICATIONS RH | HOP</h3>
               <span class="date">Nov. 2023 - Aujourd'hui</span>
@@ -52,7 +52,7 @@
           </div>
 
           <!-- ASP -->
-          <div class="experience-item">
+          <div class="experience-item" data-experience-key="ASP">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
               <h3>DÉVELOPPEUR BACK-END | ASP</h3>
               <span class="date">Mai 2023 - Oct. 2023</span>
@@ -165,7 +165,7 @@
           </div>
 
           <!-- LS2N -->
-          <div class="experience-item">
+          <div class="experience-item" data-experience-key="LS2N">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
               <h3>INGÉNIEUR DE RECHERCHE | LS2N - POLYTECH' NANTES</h3>
               <span class="date">Nov. 2011 - Déc. 2017</span>
@@ -201,38 +201,6 @@
             <p class="date">2018 - 2019</p>
           </div>
 
-        </section>
-
-        <!-- PUBLICATIONS -->
-        <section class="section-spacing animate-in" style="animation-delay: 0.3s;">
-          <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
-            <div class="section-icon">
-              <i data-lucide="book-open" style="width: 20px; height: 20px; color: #37474f;"></i>
-            </div>
-            <h2 class="section-title">PUBLICATIONS SCIENTIFIQUES</h2>
-          </div>
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
-              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
-                <strong>Subjective quality assessment comparing UHD and HD resolution in HEVC transmission chains</strong>
-              </p>
-            </li>
-            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
-              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
-                <strong>Comparing upscaling algorithms from HD to Ultra HD by evaluating preference of experience</strong>
-              </p>
-            </li>
-            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
-              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
-                <strong>NAMA3DS1-COSPAD1:</strong> Subjective video quality assessment database on coding conditions
-              </p>
-            </li>
-            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
-              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
-                <strong>Subjective experiment dataset for hybrid video quality measurement algorithms</strong>
-              </p>
-            </li>
-          </ul>
         </section>
 
       </div>
@@ -462,6 +430,38 @@
     <i data-lucide="download" style="width: 24px; height: 24px; color: white;"></i>
   </button>
 
+  <template id="publications-template">
+        <section class="section-spacing animate-in" style="animation-delay: 0.3s;">
+          <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+            <div class="section-icon">
+              <i data-lucide="book-open" style="width: 20px; height: 20px; color: #37474f;"></i>
+            </div>
+            <h2 class="section-title">PUBLICATIONS SCIENTIFIQUES</h2>
+          </div>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
+              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
+                <strong>Subjective quality assessment comparing UHD and HD resolution in HEVC transmission chains</strong>
+              </p>
+            </li>
+            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
+              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
+                <strong>Comparing upscaling algorithms from HD to Ultra HD by evaluating preference of experience</strong>
+              </p>
+            </li>
+            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
+              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
+                <strong>NAMA3DS1-COSPAD1:</strong> Subjective video quality assessment database on coding conditions
+              </p>
+            </li>
+            <li style="padding-left: 20px; border-left: 3px solid #b0bec5;">
+              <p style="font-size: 0.85rem; color: #546e7a; line-height: 1.5;">
+                <strong>Subjective experiment dataset for hybrid video quality measurement algorithms</strong>
+              </p>
+            </li>
+          </ul>
+        </section>
+  </template>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

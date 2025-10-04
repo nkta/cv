@@ -106,35 +106,66 @@ const experienceDetails = {
           <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
           <p style="color: #546e7a;">Java 11/17, Spring Boot, Spring Batch, AWS S3, SQL, Oracle Cloud 12c, PostgreSQL, Maven, Git, IntelliJ IDEA, DBeaver, Confluence, Jira</p>
         `
+  },
+  'LS2N': {
+    title: 'Ingénieur de Recherche | LS2N - Polytech\' Nantes',
+    period: 'Nov. 2011 - Déc. 2017',
+    company: 'Équipe IPI (Image, Perception, Interaction) | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Au sein de l\'équipe IPI, j\'ai travaillé sur des projets de recherche liés à la qualité d\'image et de vidéo.
+            Mes travaux ont porté sur la conception de systèmes de caméras innovants et l\'évaluation de la qualité
+            perçue par les utilisateurs, en collaboration avec des partenaires industriels et académiques.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations détaillées</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Conception et évaluation de caméras 360° et plénoptiques.</li>
+            <li>Réalisation de tests de qualité subjective pour des projets comme Netflix, UltraHD-4U, et ITEA2 JEDI (médaille d\'or 2012).</li>
+            <li>Co-auteur de 4 articles scientifiques sur la qualité vidéo et l\'évaluation subjective.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Matlab, C++, Python, Évaluation subjective, Qualité d\'image et vidéo</p>
+        `
   }
 };
 
 // Ajouter des listeners sur les items d'expérience
-document.querySelectorAll('.experience-item').forEach((item, index) => {
-  item.style.cursor = 'pointer';
-  item.style.transition = 'all 0.3s ease';
-  
-  item.addEventListener('mouseenter', () => {
-    item.style.backgroundColor = 'rgba(102, 126, 234, 0.05)';
-    item.style.marginLeft = '10px';
-  });
-  
-  item.addEventListener('mouseleave', () => {
-    item.style.backgroundColor = 'transparent';
-    item.style.marginLeft = '0';
-  });
+document.querySelectorAll('.experience-item').forEach(item => {
+  const key = item.dataset.experienceKey;
 
-  // Ajouter modal uniquement pour HOP et ASP (les 2 premiers)
-  if (index < 2) {
-    const key = index === 0 ? 'HOP' : 'ASP';
+  // Appliquer les styles et effets pour tous les items cliquables
+  if (key && experienceDetails[key]) {
+    item.style.cursor = 'pointer';
+    item.style.transition = 'all 0.3s ease';
+
+    item.addEventListener('mouseenter', () => {
+      item.style.backgroundColor = 'rgba(102, 126, 234, 0.05)';
+      item.style.marginLeft = '10px';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      item.style.backgroundColor = 'transparent';
+      item.style.marginLeft = '0';
+    });
+
     item.addEventListener('click', () => {
       const data = experienceDetails[key];
-      modalContent.innerHTML = `
-            <h2 style="color: #37474f; margin-bottom: 10px; font-size: 1.5rem;">${data.title}</h2>
-            <p style="color: #78909c; font-style: italic; margin-bottom: 5px; font-size: 0.9rem;">${data.period}</p>
-            <p style="color: #78909c; margin-bottom: 25px; font-size: 0.9rem;">${data.company}</p>
-            ${data.details}
-          `;
+      let modalHTML = `
+        <h2 style="color: #37474f; margin-bottom: 10px; font-size: 1.5rem;">${data.title}</h2>
+        <p style="color: #78909c; font-style: italic; margin-bottom: 5px; font-size: 0.9rem;">${data.period}</p>
+        <p style="color: #78909c; margin-bottom: 25px; font-size: 0.9rem;">${data.company}</p>
+        ${data.details}
+      `;
+
+      if (key === 'LS2N') {
+        const publicationsTemplate = document.getElementById('publications-template');
+        if (publicationsTemplate) {
+          modalHTML += publicationsTemplate.innerHTML;
+        }
+      }
+
+      modalContent.innerHTML = modalHTML;
       modal.style.display = 'flex';
       modal.classList.add('is-open');
       document.body.style.overflow = 'hidden';
