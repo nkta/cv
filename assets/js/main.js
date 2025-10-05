@@ -139,6 +139,15 @@ document.querySelectorAll('.experience-item').forEach(item => {
     item.style.cursor = 'pointer';
     item.style.transition = 'all 0.3s ease';
 
+    // Ajouter une icône cliquable
+    const h3 = item.querySelector('h3');
+    if (h3) {
+      const icon = document.createElement('i');
+      icon.setAttribute('data-lucide', 'mouse-pointer-click');
+      icon.className = 'clickable-icon';
+      h3.appendChild(icon);
+    }
+
     item.addEventListener('mouseenter', () => {
       item.style.backgroundColor = 'rgba(102, 126, 234, 0.05)';
       item.style.marginLeft = '10px';
