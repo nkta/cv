@@ -107,6 +107,134 @@ const experienceDetails = {
           <p style="color: #546e7a;">Java 11/17, Spring Boot, Spring Batch, AWS S3, SQL, Oracle Cloud 12c, PostgreSQL, Maven, Git, IntelliJ IDEA, DBeaver, Confluence, Jira</p>
         `
   },
+  'OBS': {
+    title: 'Développeur Web | OBS',
+    period: 'Nov. 2022 - Mars 2023',
+    company: 'Mission via Néo-Soft Groupe | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Participation à la maintenance et à l’évolution d’un site web destiné à l’accompagnement des jeunes en difficulté, avec un focus sur l’optimisation et la qualité du code.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Développé des extensions front (JavaScript) et back (Java 11, SQL) via Simplicité (low-code), réduisant le temps de développement de 20%.</li>
+            <li>Analysé les logs avec AWS et optimisé le site, diminuant les erreurs utilisateurs.</li>
+            <li>Assuré le suivi en mode Kanban et la qualité du code via SonarQube.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 11, JavaScript, SQL, Spring Boot, PostgreSQL, GitLab CI, Docker, AWS, SonarQube, Jira</p>
+        `
+  },
+  'CBP': {
+    title: 'Développeur Web | CBP',
+    period: 'Sept. 2022 - Nov. 2022',
+    company: 'Mission via Néo-Soft Groupe | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Renfort sur la maintenance et l’évolution des outils de gestion électronique de documents (GED) avec un rôle centré sur la mise en place et la sécurisation d’APIs REST.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Développé des webservices REST (Spring Boot, Hibernate) avec Swagger/OpenAPI 3, améliorant l’intégration avec les systèmes tiers.</li>
+            <li>Implémenté la couche de persistance et écrit des tests unitaires et d’intégration.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 11, Spring Boot, Hibernate, PostgreSQL, Swagger/OpenAPI 3, Jenkins, AWS, GitLab</p>
+        `
+  },
+  'SURAVENIR': {
+    title: 'Développeur Web | Suravenir Assurances',
+    period: 'Juin 2022 - Sept. 2022',
+    company: 'Mission via Sopra Steria | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Intervention sur la refonte du portail de déclaration de sinistre et de souscription, afin d’apporter des évolutions fonctionnelles et corriger les anomalies.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Livré des évolutions et corrections améliorant l’expérience utilisateur.</li>
+            <li>Présenté des démos aux équipes métiers.</li>
+            <li>Participé aux rituels Agile.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 11/17, Spring Boot, Angular, GitLab CI, Ant, Jira</p>
+        `
+  },
+  'CNP2122': {
+    title: 'Développeur Web (Front & Back) | CNP Assurances',
+    period: 'Nov. 2021 - Mai 2022',
+    company: 'Mission via Sopra Steria | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Contribution à la maintenance et à l’évolution du site de gestion des sinistres, en renforçant à la fois le front Vue.js et le back-end Spring Boot.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Développé des fonctionnalités front (Vue.js) et back (Java 11, Spring Boot).</li>
+            <li>Réalisé des tests unitaires et des démonstrations clients.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 11, SQL, Spring Boot, Vue.js, GitLab, Jenkins, SQL Developer, SonarLint, Postman</p>
+        `
+  },
+  'CNP2021': {
+    title: 'Développeur Web (Back-End) | CNP Assurances',
+    period: 'Nov. 2020 - Oct. 2021',
+    company: 'Mission via Sopra Steria | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Développement et maintenance d’APIs REST pour interfacer les applications internes et externes de CNP Assurances.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Conçu et fait évoluer des API REST.</li>
+            <li>Écrit des tests unitaires.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 8/11, Spring Boot, Spring Batch, Git</p>
+        `
+  },
+  'LAPOSTE': {
+    title: 'Développeur Web | La Poste CMSI',
+    period: 'Janv. 2020 - Juin 2020',
+    company: 'Mission via Inetum | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Membre de l’équipe MOE RH, j’ai assuré la maintenance et l’évolution d’une application recensant les accidents de travail.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Géré les mises en production.</li>
+            <li>Rédigé le manuel d’installation.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 8, PL/SQL, Bash, Java JEE</p>
+        `
+  },
+  'GIESESAM': {
+    title: 'Développeur Java | GIE SESAM-Vital',
+    period: 'Juin 2019 - Oct. 2019',
+    company: 'Mission via Inetum | Nantes',
+    details: `
+          <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
+          <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
+            Intégré à l’équipe de développement, j’ai participé à l’adaptation et à la mise à jour des outils de test de cartes Vitale.
+          </p>
+          <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
+          <ul style="line-height: 1.8; color: #546e7a;">
+            <li>Mis à jour les sources et ajouté de nouveaux cas de test.</li>
+            <li>Rédigé la documentation fonctionnelle.</li>
+          </ul>
+          <h3 style="color: #37474f; margin: 20px 0 15px;">Technologies</h3>
+          <p style="color: #546e7a;">Java 8, SVN</p>
+        `
+  },
   'LS2N': {
     title: 'Ingénieur de Recherche | LS2N - Polytech\' Nantes',
     period: 'Nov. 2011 - Déc. 2017',
