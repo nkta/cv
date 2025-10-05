@@ -219,8 +219,8 @@ const experienceDetails = {
   },
   'GIESESAM': {
     title: 'Développeur Java | GIE SESAM-Vital',
-    period: 'Juin 2019 - Oct. 2019',
-    company: 'Mission via Inetum | Nantes',
+    period: 'Fév. 2019 - Oct. 2019',
+    company: 'Mission via Inetum | Le Mans',
     details: `
           <h3 style="color: #37474f; margin-bottom: 15px;">Contexte</h3>
           <p style="margin-bottom: 20px; line-height: 1.7; color: #546e7a;">
