@@ -316,45 +316,57 @@ downloadBtn.addEventListener('click', function() {
     this.style.transform = 'scale(1)';
   }, 200);
 
-  // Préparer pour l'impression
-  const pdfButton = document.getElementById('downloadPDF');
-  const modal = document.getElementById('experienceModal');
-  
-  // Cacher les éléments non imprimables
-  pdfButton.style.display = 'none';
-  modal.style.display = 'none';
-  
-  // Ajouter classe pour l'impression
-  document.body.classList.add('printing');
-  
-  // Notification (temporaire et masquée à l'impression)
+  // Notification
   const notification = document.createElement('div');
   notification.className = 'notification';
   notification.setAttribute('aria-live', 'polite');
   notification.style.cssText = 'position: fixed; top: 20px; right: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 16px; border-radius: 8px; box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4); z-index: 9999; font-size: 12px; font-weight: 500;';
-  notification.textContent = 'Ouverture de la boîte d\'impression...';
+  notification.textContent = 'Préparation de l\'impression...';
   document.body.appendChild(notification);
 
-  // Petit délai pour que les styles s'appliquent
-  setTimeout(() => {
-    // Ouvrir la boîte de dialogue d'impression
-    window.print();
-    
-    // Après impression, restaurer l'interface
-    setTimeout(() => {
-      pdfButton.style.display = 'flex';
-      document.body.classList.remove('printing');
-      
-      notification.textContent = '✓ Vous pouvez maintenant sauvegarder en PDF';
-      notification.style.background = 'linear-gradient(135deg, #4caf50 0%, #45a049 100%)';
-      
-      setTimeout(() => {
-        if (notification.parentNode) {
-          document.body.removeChild(notification);
-        }
-      }, 3000);
-    }, 500);
-  }, 100);
+  // Créer un iframe caché
+  const iframe = document.createElement('iframe');
+  iframe.style.position = 'fixed';
+  iframe.style.width = '0';
+  iframe.style.height = '0';
+  iframe.style.border = 'none';
+  document.body.appendChild(iframe);
+
+  // Charger le contenu de cv-print.html
+  fetch('cv-print.html')
+    .then(response => response.text())
+    .then(html => {
+      const printDoc = iframe.contentWindow.document;
+      printDoc.open();
+      printDoc.write(html);
+      printDoc.close();
+
+      // Attendre que le contenu et les styles soient chargés
+      iframe.onload = function() {
+        notification.textContent = 'Ouverture de la boîte d\'impression...';
+        // Lancer l'impression
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print();
+
+        // Nettoyage après un délai
+        setTimeout(() => {
+          document.body.removeChild(iframe);
+          notification.textContent = '✓ Terminé';
+          notification.style.background = 'linear-gradient(135deg, #4caf50 0%, #45a049 100%)';
+          setTimeout(() => {
+            if (notification.parentNode) {
+              document.body.removeChild(notification);
+            }
+          }, 3000);
+        }, 1000);
+      };
+    })
+    .catch(err => {
+      console.error('Erreur lors du chargement du CV pour impression:', err);
+      notification.textContent = 'Erreur de chargement';
+      notification.style.background = 'linear-gradient(135deg, #f44336 0%, #d32f2f 100%)';
+      document.body.removeChild(iframe);
+    });
 });
 
 // ========================================
