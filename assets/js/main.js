@@ -118,7 +118,7 @@ const experienceDetails = {
           </p>
           <h3 style="color: #37474f; margin-bottom: 15px;">Réalisations</h3>
           <ul style="line-height: 1.8; color: #546e7a;">
-            <li>Développé des extensions front (JavaScript) et back (Java 11, SQL) via Simplicité (low-code), réduisant le temps de développement de 20%.</li>
+            <li>Développé des extensions front (JavaScript) et back (Java 11, SQL) via Simplicité (low-code), réduisant le temps de développement.</li>
             <li>Analysé les logs avec AWS et optimisé le site, diminuant les erreurs utilisateurs.</li>
             <li>Assuré le suivi en mode Kanban et la qualité du code via SonarQube.</li>
           </ul>
